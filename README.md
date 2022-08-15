@@ -1,3 +1,3 @@
-# Bootcamp
- this is my respitory for all my bootcamp stuff
+# Web Fundamentals
+ this is my respitory for all my Web Fundamentals stuff
  enjoy!
