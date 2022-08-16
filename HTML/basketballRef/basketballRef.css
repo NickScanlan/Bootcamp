@@ -1,0 +1,65 @@
+body{
+    background-color: bisque;
+}
+
+h1{
+    color: chocolate;
+    background-color:brown;
+    font-size: 50px;
+    text-align:center;
+}
+
+#slogan{
+    color: red;
+    text-align: right;
+    font-size: 20px;
+    font-style:italic;
+    font-family: cursive;
+    text-decoration: underline;
+}
+
+#fax{
+    color: green;
+}
+
+li{
+    color:darkolivegreen;
+    font-weight: bold;
+}
+
+.crossed-out{
+    text-decoration: line-through;
+    font-size: 30px;
+}
+
+.is-red{
+    color: red;
+}
+
+button{
+    background-color: aquamarine;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#mid-btn{
+    height: 200px;
+    width: 100px;
+}
+
+.rnd-btn{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color: red;
+}
+
+#last-btn{
+    border-radius: 15px;
+    width: 200px;
+}
+
+.shadow{
+    box-shadow: 20px 10px 5px rgb(164, 95, 95);
+}
