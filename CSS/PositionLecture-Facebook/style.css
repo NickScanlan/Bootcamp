@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+body{
+    background-image: linear-gradient(to bottom, grey, white, white, blue);
+    height: 100vh;
+
+}
+
+
+
+#container{
+    height: 100px;
+
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+#coverPhoto{
+    height: 700px;
+    background: url("./06-PositionLecture-FacebookClone-Thursday/coverPhoto.webp");
+    background-size: cover;
+}
