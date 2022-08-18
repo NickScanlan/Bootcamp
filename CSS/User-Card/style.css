@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+/* main card stuff */
+
+#card{
+    border: 5px ridge grey;
+    background-color: white;
+    height: 275px;
+    width: 600px;
+    margin: 40px auto;
+}
+
+
+#color{
+    /* border: 1px solid red; */
+    background-color: rgb(39, 145, 145);
+    height:80px;
+    width: 590px;
+}
+
+#info-space{
+    /* border: 3px solid green; */
+    padding: 0 20px;
+    height: 200px;
+}
+
+#list{
+    position: relative;
+    bottom: 40px;
+
+}
+
+
+/* #info stuff */
+#info-space>#list{
+    list-style: none;
+}
+
+#list>p{
+    margin-bottom: 10px;
+}
+
+#pfp>img{
+    border-radius: 50%;
+    border: 10px double black ;
+    width: 75px;
+    background-color: whitesmoke;
+}
+
+#loc{   
+    margin-top: 10px;
+
+}
+
+#loc>img{
+    height: 15px;
+    margin-right: 10px;
+}
+
+#name{
+    font-size: x-large;
+}
+
+#edit>img{
+    margin-right: 10px;
+    height: 15px;
+}
+
+#about{
+    margin-top: 10px;
+}
