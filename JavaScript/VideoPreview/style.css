@@ -64,8 +64,9 @@ body {
     width: 100%;
 }
 
-.placeholder svg {
-    border-radius: 10px;
+.placeholder>video{
+    height: 600px;
+    width: 600px;
 }
 
 .row {
