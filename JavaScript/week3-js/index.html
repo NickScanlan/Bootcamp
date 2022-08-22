@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Gram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<!--body is the red main box-->
+<body> 
+    <div id="nav-bar">
+        <h1>PuppyGram</h1>
+        <div id="nav-middle">
+            <input type="text" placeholder="Search a puppy name">
+            <button>Search!</button>
+        </div>
+        <button onclick="toggleLogin(this)">Login</button>
+    </div>
+    <!--flex container div to hold the two columns-->
+    <div class="flex-container">
+        <div id="col-left">
+            <div class="puppy-box">
+                <div class="puppy-box-left">
+                    <img src="./resources/puppy.jpeg" alt="puppy1">
+                    <h3>Junior</h3>
+                    <em>Male</em>
+                    <p>Breed: <em>Fox</em></p>
+                    <button>10 likes</button>
+                    <button onclick="petDog()">Pet this puppy</button>
+                </div>
+                <p>Junior is a very spontaneous, high energy <a href="#">Fox</a>  who loves to eat food</p>
+            </div>
+
+            <div class="puppy-box">
+                <div class="puppy-box-left">
+                    <img src="./resources/beagle.jpeg" alt="puppy2">
+                    <h3>Fluffy</h3>
+                    <em>Female</em>
+                    <p>Breed: <em>Beagle</em></p>
+                    <button>8 likes</button>
+                    <button onclick="petDog()">Pet this puppy</button>
+
+                </div>
+                <p>Junior is a very spontaneous, high energy <a href="#">Fox</a>  who loves to eat food</p>
+            </div>
+        </div>
+        <div id="col-right">
+            <div class="col-right-box">
+                <p>Please upload your pup info to our puppy social media</p>
+                <button onclick="removeButton(this)">Upload new pup!</button>
+            </div>
+            <div class="col-right-box">
+                <p id="video-title">Our popular video of the week!</p>
+                <video src="./resources/puppy_video.mp4"></video>
+                <em>This is Josie, the playful beach dog!</em>
+            </div>
+        </div>
+    </div>
+    <!--cookie box div-->
+    <div id="cookie-box">
+        <img src="./resources/caution.jpeg" alt="">
+        <p>This site will collect your information and bake it into a cookie which will be gluten free and no trans-fat (hydrogenated and partially hydrogenated oils)</p>
+        <button>I Accept</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
