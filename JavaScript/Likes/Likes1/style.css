@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 400px;
+    padding: 40px;
+}
+
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
