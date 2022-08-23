@@ -1,3 +1,3 @@
 # Web Fundamentals
- this is my respitory for all my Web Fundamentals stuff
+ this is my repository for all my Web Fundamentals stuff
  enjoy!
