@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuppyGram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div id="navbar">
+        <h1>PuppyGram</h1>
+        <div id="search">
+            <input id="nameSearch" type="text" placeholder="Search a puppy name">
+            <select onchange="chooseLocation(this)">
+                <option value="">pleace select location</option>
+                <option value="dc">dc</option>
+                <option value="ny">ny</option>
+            </select>
+            <button onclick="searchPuppy()">Search!</button>
+        </div>
+        <button id="login" onclick="Loginbtn(this)">Login</button>
+    </div>
+    <!-- container -->
+    <div id="container">
+        <div id="left">
+            <div id="junior">
+                <div>   
+                    <img src="./resources/puppy.jpeg" alt="Junior">
+                    <h2>Junior</h2>
+                    <em>Male</em>
+                    <P>Breed: Fox</P>
+                    <button id="likes" onclick="addLike('dog1')"> <span id="dog1">10</span> Likes</button>
+                </div> 
+                <p>Junior is a very spontaneous, high-energy <a href="#">Fox</a> who loves to eat food... same tbh.</p>
+            </div>
+            <div id="fluffy">
+                <div>   
+                    <img src="./resources/beagle.jpeg" alt="Junior">
+                    <h2>Fluffy</h2>
+                    <em>Female</em>
+                    <P>Breed: Beagle</P>
+                    <button id="likes" onclick="addLike('dog2')"> <span id="dog2">8 </span> Likes</button>
+                </div> 
+                <p>Fluffy is a quiet, shy, and calm <a href="#">Beagle</a> who loves to eat (same) and play fetch.</p>
+            </div>
+        </div>
+        <div id="right">
+            <div id="con">
+                <div id="con-r1">
+                    <p>Please upload your pup info to our puppy social media!</p> 
+                    <button onclick="uploadPup(this)">Upload new Pup!</button>
+                </div>
+                
+                <div id="con-r2">
+                    <p>Our popular video of the week!</p>
+                    <div id="vidcon">
+                        <video id="dogVid" src="./resources/puppy_video.mp4" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)" muted="muted"></video>
+                        <em>This is Josie, the playful beach doggo!</em>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="cookiebar">
+        <img src="./resources/caution.jpeg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusantium impedit rerum tempore dolorum quae magni.</p>
+        <button onclick="barRemove('cookiebar')">I Accept</button>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
