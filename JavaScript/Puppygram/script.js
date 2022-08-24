@@ -71,11 +71,11 @@ function chooseLocation(element){
 // switch photo when hovering
 
 function switchImg(imgElement){
+    imgElement.src = "./resources/anothaPuppy.jpeg"
     console.log(imgElement.src)
-    if(imgElement.src === "./resources/beagle.jpeg"){
-        imgElement.src = "./resources/anothaPuppy.jpeg"
-    }else{
-        imgElement.src = "./resources/beagle.jpeg"
-    }
+}
 
+function switchImg2(imgElement){
+    imgElement.src ="./resources/beagle.jpeg"
+    console.log(imgElement.src)
 }
