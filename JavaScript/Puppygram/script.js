@@ -1,4 +1,4 @@
-console.log("ogh")
+console.log("yo")
 
 
 // remove button
@@ -66,4 +66,16 @@ function chooseLocation(element){
     // or you could use ==> 
     
     alert(`you are searching for doge in ${element.value}. come by anytime!`);
+}
+
+// switch photo when hovering
+
+function switchImg(imgElement){
+    console.log(imgElement.src)
+    if(imgElement.src === "./resources/beagle.jpeg"){
+        imgElement.src = "./resources/anothaPuppy.jpeg"
+    }else{
+        imgElement.src = "./resources/beagle.jpeg"
+    }
+
 }
