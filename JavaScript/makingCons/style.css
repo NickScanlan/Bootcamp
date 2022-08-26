@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: white;
+}
+
+
+/* navbar */
+#navbar{
+    background-color: black;
+    height: 70px;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nav1, #nav2{
+    color: white;
+    height: 30px;
+}
+
+#nav1{
+    width: 800px;
+    padding: 5px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#profile{
+    font-size: 50px;
+}
+
+h3{ 
+    font-weight: 100;
+    font-size: 23px;
+}
+
+#mp{
+    font-weight: 900;
+}
+
+#nav2{
+    width: 100px;
+}
+
+#signout{
+    height: 30px;
+    width: 100px;
+    font-size: large;
+    color: white;
+    background-color: rgb(0, 110, 255);
+}
+
+/* navbar end */
+
+#container{
+    width: 100;
+    height: 800px;
+    padding: 0 100px;
+    margin: 0 200px;
+    display: flex;
+    gap: 30px;
+}
+
+
+#col1{
+    flex: 2;
+}
+
+#card{
+    border:5px solid rgb(204,204,204);
+    height: 500px;
+}
+
+#cardheader{
+    height: 150px; ;
+    background-color: rgb(23,162,184);
+    display: flex;
+    align-items: flex-end;
+}
+
+#jane{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border-radius: 50%;
+    border: 10px double black;
+    position: relative;
+    top: 80px;
+    left: 100px;
+}
+
+#cardinfo{
+    height: 350px;
+    padding-top: 60px;
+    padding-left: 120px;
+}
+
+#name{
+    font-size: 70px;
+}
+
+#loc{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+#loc>img{
+    height: 25px;
+    width: 18px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+#loc>p{
+    font-size: 25px;
+}
+
+#desc1, #desc2{
+    font-size: 40px;
+    
+} 
+
+#desc2{
+    margin-bottom: 10px;
+
+}
+
+#edit{
+    display: flex;
+}
+
+#edit a{
+    font-size: 25px;
+}
+
+#edit img{
+    height: 30px;
+    margin-right: 10px;
+}
+
+#edu{
+    border: 5px solid rgb(204,204,204);
+    margin-top: 20px;
+    height: 280px;
+}
+
+#eduheader{
+    background-color: black;
+    color: white;
+    height: 100px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+#eduinfo{
+    height: 180px;
+    padding: 20px 30px;
+}
+
+#code{
+    font-size: 50px;
+}
+
+#date{
+    font-size: 40px;
+    color: grey;
+}
+
+#stack{
+    font-size: 30px;
+}
+
+#col2{
+    flex: 1;
+}
+
+#conreqs{
+    border: 5px solid rgb(204,204,204);
+    height: 350px;
+}
+
+#reqheader{
+    border: 5px solid rgb(204,204,204);
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    height: 100px;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#circle{
+    background-color: rgb(204,204,204);
+    font-weight: 600;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#two{
+    font-size: 30px;
+    color: black;
+}
+
+#reqs{
+    height: 250px;
+    padding: 30px;
+
+}
+
+#check>img, #x>img{
+    border: 5px solid rgb(204,204,204);
+}
+
+#reqs img{
+    border: 1px solid black;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+
+}
+
+#t{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#te, #pk{
+    font-size: 30px;
+    margin-right: 80px;
+    margin-left: 30px;
+    width: 90px;
+    display: flex;
+}
+
+#p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#urcons{
+    margin-top: 30px;
+    height: 420px;
+}
+
+#urconhead{
+    border: 5px solid rgb(204,204,204);
+    background-color: black;
+    height: 120px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#oval{
+    background-color: rgb(204,204,204);
+    font-size: 30px;
+    font-weight: 600;
+    height: 60px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#your{
+    font-size: 40px;
+    color: white;
+}
+
+#cons{
+    border: 5px solid rgb(204,204,204);
+    height: 250px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#cons img{
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+#ad, #aj, #at, #ay{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    font-size: 25px;
+}
+
+#more{
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 30px;
+    align-items: center;
+    font-size: larger;
+    font-weight: 700;
+}
+
+
+
+
+
