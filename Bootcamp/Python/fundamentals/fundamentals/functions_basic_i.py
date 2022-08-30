@@ -6,9 +6,9 @@ print(number_of_food_groups())
 #print 5
 
 #2
-# def number_of_military_branches():
-#     return 5
-# print(number_of_days_in_a_week_silicon_or_triangle_sides() + number_of_military_branches())
+def number_of_military_branches():
+    return 5
+print(number_of_days_in_a_week_silicon_or_triangle_sides() + number_of_military_branches())
 
 #prints error
 
@@ -28,18 +28,18 @@ print(number_of_fingers())
 
 #prints 10 5
 
-#5
-# def number_of_great_lakes():
-#     print(5)
-# x = number_of_great_lakes()
-# print(x)
+# 5
+def number_of_great_lakes():
+    print(5)
+x = number_of_great_lakes()
+print(x)
 
 #prints 5 none
 
-#6
-# def add(b,c):
-#     print(b+c)
-# print(add(1,2) + add(2,3))
+# 6
+def add(b,c):
+    print(b+c)
+print(add(1,2) + add(2,3))
 
 #prints type error
 
