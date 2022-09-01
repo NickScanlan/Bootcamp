@@ -33,4 +33,4 @@ class User:
 
 nick = User('nick', 'scan', 'fds@fdsa.com', 6654)
 
-nick.account.deposit(200).display_account_info()
+nick.account.deposit(200).withdraw(20).yield_interest().display_account_info()
