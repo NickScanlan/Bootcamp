@@ -1,11 +1,36 @@
 
+class BankAccount:
 
-# Add a make_deposit method to the User class that calls on it's bank account's instance methods.
+    def __init__(self, int_rate, balance): 
+        self.int_rate = int_rate
+        self.balance = balance
+    def deposit(self, amount):
+        self.balance += amount
+        return self
+    
+    def withdraw(self, amount):
+        self.balance -= amount
+        return self
+    
+    def display_account_info(self): 
+        print(self.balance)        
+        return self
+    
+    def yield_interest(self):
+        self.balance += (self.balance * self.int_rate)
+        return self
 
-# Add a make_withdrawal method to the User class that calls on it's bank account's instance methods.
 
-# Add a display_user_balance method to the User class that displays user's account balance
+class User:
+    def __init__(self,first_name, last_name, email, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.age = age
+        self.account = BankAccount(.12, 2000)
+    def display_info(self):
+        print(f"user {self.first_name}, {self.last_name}, {self.email}, {self.age}")
 
-# SENSEI BONUS: Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
+nick = User('nick', 'scan', 'fds@fdsa.com', 6654)
 
-# SENPAI BONUS: Add a transfer_money(self, amount, other_user) method to the user class that takes an amount and a different User instance, and transfers money from the user's account into another user's account.
+nick.account.deposit(200).display_account_info()
