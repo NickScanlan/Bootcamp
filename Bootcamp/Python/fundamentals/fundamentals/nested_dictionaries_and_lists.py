@@ -46,11 +46,11 @@ dojo = {
 
 def printInfo(dict):
     print(len(dict['locations']), "LOCATIONS")
-    for f in dict['locations']:
-        print(f)    
+    for loc in dict['locations']:
+        print(loc)    
     print(len(dict['instructors']), "INSTRUCTORS")
-    for g in dict['instructors']:
-        print(g)
+    for ints in dict['instructors']:
+        print(ints)
 printInfo(dojo)
 
 
