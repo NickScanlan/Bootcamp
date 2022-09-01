@@ -1,4 +1,3 @@
-
 class BankAccount:
     #constructor
     def __init__(self, int_rate, balance): 
