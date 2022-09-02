@@ -1,5 +1,5 @@
 """
-    virtual environments: used to control evrsions of our packages for our apps, walled off from the rest of our computer
+    virtual environments: used to control versions of our packages for our apps, walled off from the rest of our computer
     
     step 0: pip install pipenv - we run this ONCE to install it to our computer globally (does not matter where you run)
     
