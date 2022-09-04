@@ -20,14 +20,31 @@
     button{
         margin: 0px 20px;
     }
+
+    div{
+        display: flex;
+        justify-content: center;
+    }
 </style>
 </head>
 <body>
+    
+    <h1> Counter </h1>
+    
+    <!-- this vavriable is to respresent the count on the page -->
+   <h2>{{count}}</h2>
+    
     <div>
-        <h1> Counter </h1>
-        <h2> 1 </h2>
-        <button type="button" class="btn btn-primary">Click</button>
-        <button type="button" class="btn btn-danger">Reset</button>
-   </div>
+    <!-- this form is just a button to redirect user to counter which will add 1 to variable 'counter' -->
+    <form action="/add">
+        <button aciton="/add" type="submit" class="btn btn-primary">Click</button>
+    </form>
+    
+    
+    <!-- this form is just a button to redirect user to /reset -->
+    <form action="/destroy">
+        <button action='/destroy' type="submit" class="btn btn-danger">Reset</button>
+    </form>
+    </div>
 </html>
 </body>
