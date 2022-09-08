@@ -1,0 +1,44 @@
+INSERT INTO dojos (name)
+VALUES ('dojo1'), ('dojo2'), ('dojo3');
+
+DELETE FROM dojos WHERE id <= 3;
+
+INSERT INTO dojos (name)
+VALUES ('dojo4'), ('dojo5'), ('dojo6');
+
+-- first dojo
+INSERT INTO ninjas (first_name, last_name, age, dojo_id )
+VALUES ('ninja1', 'ninjaOne', 20, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ( 'ninja2', 'ninjaTwo', 22, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('ninja3', 'ninjaThree', 23, 4);
+
+-- second dojo 
+INSERT INTO ninjas (first_name, last_name, age, dojo_id )
+VALUES ('ninja4', 'ninjaOne', 20, 5);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ( 'ninja5', 'ninjaTwo', 22, 5);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('ninja6', 'ninjaThree', 23, 5);
+
+-- thrid dojo
+INSERT INTO ninjas (first_name, last_name, age, dojo_id )
+VALUES ('ninja7', 'ninjaOne', 20, 6);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ( 'ninja8', 'ninjaTwo', 22, 6);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('ninja9', 'ninjaThree', 23, 6);
+
+SELECT * FROM dojos LIMIT 3;
+
+SELECT * FROM dojos LIMIT 3 OFFSET 6;
+
+SELECT dojos FROM ninja9; 
+
