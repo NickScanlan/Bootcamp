@@ -93,6 +93,6 @@ function reverseWordsSplit(wordsStr) {
 
 
 
-// console.log(reverseWords(strA)) //expectedA: olleh
+console.log(reversedWord(strA)) //expectedA: olleh
 // console.log(reverseWords(strB)) //expectedB: olleh dlrow
 // console.log(reverseWords(strC)) //expectedC: cba fed ihg
