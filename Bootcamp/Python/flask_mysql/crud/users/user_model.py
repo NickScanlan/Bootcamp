@@ -17,3 +17,13 @@ class users:
         query = "SELECT * FROM users;"
         results = connectToMySQL(DATABASE).query_db(query)
         print(results)
+        all_users = []
+        for row_from_db in results:
+            user_instance = cls(row_from_db)
+            all_users.append(user_instance)
+        return all_users
+
+    @classmethod
+    def create(cls, data):
+        query = "INSERT INTO users (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s);"
+        connectToMySQL(DATABASE).query_db(query, data)

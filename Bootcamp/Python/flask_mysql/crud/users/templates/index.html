@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users</title>
+</head>
+<body>
+    <h1>List of Users</h1>
+    <ul>
+        {% for one_user in all_users %}
+        <li>{{one_user.id}}) Name: {{one_user.first_name}} {{one_user.last_name}} | Email: {{one_user.email}} </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/form">Add a User</a>
+</body>
+</html>

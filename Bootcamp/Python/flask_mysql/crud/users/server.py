@@ -5,10 +5,20 @@ app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/read')
 def index():
-    users.get_all()
-    return render_template('create.html')
+    all_users = users.get_all()
+    print(all_users)
+    return render_template('index.html', all_users = all_users)
+
+@app.route('/form')
+def user_form():
+    return render_template('form.html')
+
+@app.route('/create', methods=['POST'])
+def create_user():
+    users.create(request.form)
+    return redirect('/read')
 
 
 
