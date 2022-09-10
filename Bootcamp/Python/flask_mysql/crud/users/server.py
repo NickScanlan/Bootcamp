@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/read')
+@app.route('/')
 def index():
     all_users = users.get_all()
     print(all_users)
@@ -18,7 +18,7 @@ def user_form():
 @app.route('/create', methods=['POST'])
 def create_user():
     users.create(request.form)
-    return redirect('/read')
+    return redirect('/')
 
 
 
