@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <h1>Welcome to my users app</h1>
+    <ul>
+        {% for one_user in all_users %}
+            <li>
+            {{one_user.id}}) |  First Name: <a href="/users/{{one_user.id}}">{{one_user.first_name}}</a> | Last Name: {{one_user.last_name}} | Email: {{one_user.email}} || 
+            <a href="/users/{{one_user.id}}/edit">Edit User</a> ||
+            <a href="/users/{{one_user.id}}/delete">Delete User</a> 
+            </li>
+        {%endfor%}
+    </ul>
+
+    <a href="/users/new">Add a new User</a>
+</body>
+</html>
