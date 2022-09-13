@@ -9,53 +9,74 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div class="container">
+        
+        <div class="row">
+            <h1>Login and Registeration</h1>
+        </div>
+        
     <div class="row">
-        <h1>Login and Registeration</h1>
-    </div>
-    <div class="row">
-    <div class="col-6">
-    <!-- login form -->
-        <h2>Login</h2>
-        <form action="/user/create" method="post">
-            <div class="mb-3 d-flex flex-column">
-                <label for="email">Email</label>
-                <input class="form-control" type="text" name="email" id="email">
-            </div>
-            <div class="mb-3 d-flex flex-column">
-                <label for="pw">Password</label>
-                <input class="form-control" type="text" name="pw" id="pw">
-            </div>
-            <button class="btn = btn-success">Submit</button>
-        </form>   
-    </div>
-<!-- reg form -->
-    <div class="col-6">
-        <h2>Register</h2>
-        <form action="/user/create" method="post">
-            <div class="mb-3 d-flex flex-column" >
-                <label for="first_name">First Name</label>
-                <input class="form-control" type="text" name="first_name" id="first_name">
-            </div>
-            <div class="mb-3 d-flex flex-column" >
-                <label for="last_name">Last Name</label>
-                <input class="form-control" type="text" name="last_name" id="last_name">
-            </div>
-            <div class="mb-3 d-flex flex-column" >
-                <label for="email">Email</label>
-                <input class="form-control" type="text" name="email" id="email">
-            </div>
-            <div class="mb-3 d-flex flex-column" > 
-                <label for="pw">Password</label>
-                <input class="form-control" type="text" name="pw" id="pw">
-            </div>
-            <div class="mb-3 d-flex flex-column" >
-                <label for="confirm_pw">Confirm Password</label>
-                <input class="form-control" type="text" name="confirm_pw" id="confirm_pw">
-            </div>
-            <button class="btn = btn-success">Register</button>
-        </form>
-    </div>
+        <div class="col-6">
+        <!-- login form -->
+            <h2>Login</h2>
+            {%for message in get_flashed_messages(category_filter=['log'])%}
+                <p>{{message}}</p>
+            {%endfor%}
+            <form action="/users/login" method="post">
+                
+                <div class="mb-3 d-flex flex-column">
+                     <label for="email">Email</label>
+                        <input class="form-control" type="text" name="email" id="email">
+                </div>
+                 
+                <div class="mb-3 d-flex flex-column">
+                        <label for="pw">Password</label>
+                        <input class="form-control" type="text" name="password" id="password">
+                </div>
+                    
+                <button class="btn = btn-success">Submit</button>
+            </form>   
+        </div>
+        
+        
+        
+        <!-- reg form -->
+        <div class="col-6">
+            <h2>Register</h2>
+            {%for message in get_flashed_messages(category_filter=['reg'])%}
+                <p>{{message}}</p>
+            {%endfor%}
+            <form action="/users/register" method="post">
+                    
+                <div class="mb-3 d-flex flex-column" >
+                    <label for="first_name">First Name</label>
+                    <input class="form-control" type="text" name="first_name" id="first_name">
+                </div>
+                    
+                <div class="mb-3 d-flex flex-column" >
+                    <label for="last_name">Last Name</label>
+                    <input class="form-control" type="text" name="last_name" id="last_name">
+                </div>
+                    
+                <div class="mb-3 d-flex flex-column" >
+                    <label for="email">Email</label>
+                    <input class="form-control" type="text" name="email" id="email">
+                </div>
+                    
+                <div class="mb-3 d-flex flex-column" > 
+                    <label for="password">Password</label>
+                    <input class="form-control" type="text" name="password" id="password">
+                </div>
+                    
+                <div class="mb-3 d-flex flex-column" >
+                     <label for="confirm_password">Confirm Password</label>
+                    <input class="form-control" type="text" name="confirm_password" id="confirm_password">
+                </div>
+                    
+                <button class="btn = btn-success">Register</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
