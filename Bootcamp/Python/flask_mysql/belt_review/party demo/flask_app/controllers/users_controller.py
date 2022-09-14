@@ -1,5 +1,6 @@
 from flask_app import app 
 from flask import render_template, redirect, request, flash, session
+from flask_app.models.party_model import Party
 from flask_bcrypt import Bcrypt
 from flask_app.models.user_model import User
 
@@ -46,13 +47,14 @@ def login():
 def welcome():
     if 'user_id' not in session:
        return redirect ('/')
-    return "ya boi is logged in"
-
+    all_parties = Party.get_all()
+    return render_template('dashboard.html', all_parties = all_parties)
 
 @app.route('/user/logout')
 def logout():
     del session['user_id']
     return redirect ('/')
+
 
 
 
