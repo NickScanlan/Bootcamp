@@ -3,14 +3,13 @@ from flask_app import DATABASE
 from flask import flash
 from flask_app.models import user_model 
 
-class Recipe:
+class Sighting:
     def __init__(self, data):
         self.id = data['id']
-        self.name = data['name']
-        self.description = data['description']
-        self.time_limit = data['time_limit']
-        self.instructions = data['instructions']
-        self.date_made = data['date_made']
+        self.location = data['location']
+        self.info = data['info']
+        self.date = data['date']
+        self.amount = data['amount']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
         self.user_id = data['user_id']
@@ -18,18 +17,19 @@ class Recipe:
 
     @classmethod
     def create(cls, data):
-        query ="INSERT INTO recipes (name, description, time_limit, instructions, date_made, user_id) VALUES (%(name)s, %(description)s, %(time_limit)s, %(instructions)s, %(date_made)s, %(user_id)s);"
+        query ="INSERT INTO sightings (location, info, date, amount, user_id) VALUES (%(location)s, %(info)s, %(date)s, %(amount)s, %(user_id)s);"
         return connectToMySQL(DATABASE).query_db(query, data)
 
 
     @classmethod
     def get_by_id(cls, data):
-        query = "SELECT * FROM recipes JOIN users on users.id = recipes.user_id WHERE recipes.id = %(id)s;"
+        query = "SELECT * FROM sightings JOIN users on users.id = sightings.user_id WHERE sightings.id = %(id)s;"
         results =  connectToMySQL(DATABASE).query_db(query, data)
         if len(results) < 1:
             return False
         row = results[0]
-        this_recipe = cls(row)
+        print(row)
+        this_sighting = cls(row)
         user_data = {
             **row, 
             'id': row['users.id'],
@@ -37,23 +37,23 @@ class Recipe:
             'updated_at': row['users.updated_at']
         }
         planner = user_model.User(user_data)
-        this_recipe.planner = planner
-        return this_recipe
+        this_sighting.planner = planner
+        return this_sighting
 
 
     @classmethod
     def update(cls, data):
-        query = "UPDATE recipes SET name = %(name)s, description = %(description)s, time_limit = %(time_limit)s, instructions = %(instructions)s, date_made = %(date_made)s WHERE id = %(id)s; "
+        query = "UPDATE sightings SET location = %(location)s, info = %(info)s, date = %(date)s, amount = %(amount)s WHERE id = %(id)s; "
         return connectToMySQL(DATABASE).query_db(query, data)
 
     @classmethod 
     def get_all(cls):
-        query = "SELECT * FROM recipes JOIN users on recipes.user_id = users.id;"
+        query = "SELECT * FROM sightings JOIN users on sightings.user_id = users.id;"
         results = connectToMySQL(DATABASE).query_db(query)
         if len(results) > 0:
-            all_recipes = []
+            all_sightings = []
             for row in results:
-                this_recipe = cls(row)
+                this_sighting = cls(row)
                 user_data = {
                     **row, 
                     'id': row['users.id'],
@@ -61,36 +61,33 @@ class Recipe:
                     'updated_at': row['users.updated_at']
                 }
                 this_user = user_model.User(user_data)
-                this_recipe.planner = this_user
-                all_recipes.append(this_recipe)
-            return all_recipes
+                this_sighting.planner = this_user
+                all_sightings.append(this_sighting)
+            return all_sightings
         return []
 
 
     @classmethod
     def delete(cls, data):
-        query = "DELETE FROM recipes WHERE id = %(id)s"
+        query = "DELETE FROM sightings WHERE id = %(id)s"
         return connectToMySQL(DATABASE).query_db(query, data)
 
     @staticmethod
     def validation(form_data):
         is_valid = True
-        if len(form_data['name']) < 1:
-            flash("Name Required")
+        if len(form_data['location']) < 1:
+            flash("Location Required")
             is_valid = False
-        is_valid = True
-        if len(form_data['description']) < 1:
-            flash("Description Required")
+        
+        if len(form_data['info']) < 1:
+            flash("What Happened?")
             is_valid = False
-        is_valid = True
-        if len(form_data['instructions']) < 1:
-            flash("Instructions Required")
+        
+        if len(form_data['date']) < 1:
+            flash("When did it happen")
             is_valid = False
-        is_valid = True
-        if len(form_data['date_made']) < 1:
-            flash("Date Required")
-            is_valid = False
-        if "time_limit" not in form_data:
-            flash("Can this be cooked in less than 30 minutes?")
+        
+        if len(form_data['amount']) < 1:
+            flash("amount of times seen?")
             is_valid = False
         return is_valid

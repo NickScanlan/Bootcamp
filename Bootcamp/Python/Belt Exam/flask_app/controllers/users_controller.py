@@ -1,8 +1,8 @@
-from dataclasses import dataclass
 from flask_app import app
 from flask import render_template, redirect, flash, request, session
 from flask_bcrypt import Bcrypt
 from flask_app.models.user_model import User
+from flask_app.models.sighting_model import Sighting
 
 
 bcrypt = Bcrypt(app)
@@ -45,9 +45,14 @@ def login():
 
 @app.route('/welcome')
 def welcome():
-    if not "user_id" in session:
+    if "user_id" not in session:
         return redirect('/')
-    return render_template('welcome.html')
+    all_sightings = Sighting.get_all()
+    user_data = {
+        'id' : session['user_id']
+    }
+    logged_user = User.get_by_id(user_data)
+    return render_template('welcome.html', all_sightings = all_sightings, logged_user = logged_user)
 
 
 
