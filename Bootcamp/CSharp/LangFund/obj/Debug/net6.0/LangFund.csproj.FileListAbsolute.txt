@@ -1,0 +1,15 @@
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.csproj.AssemblyReference.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.AssemblyInfoInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.AssemblyInfo.cs
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.csproj.CoreCompileInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\bin\Debug\net6.0\LangFund.exe
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\bin\Debug\net6.0\LangFund.deps.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\bin\Debug\net6.0\LangFund.runtimeconfig.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\bin\Debug\net6.0\LangFund.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\bin\Debug\net6.0\LangFund.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\refint\LangFund.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\LangFund.genruntimeconfig.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\LangFund\obj\Debug\net6.0\ref\LangFund.dll
