@@ -1,0 +1,15 @@
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.csproj.AssemblyReference.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.AssemblyInfoInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.AssemblyInfo.cs
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.csproj.CoreCompileInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\bin\Debug\net6.0\fund1.exe
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\bin\Debug\net6.0\fund1.deps.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\bin\Debug\net6.0\fund1.runtimeconfig.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\bin\Debug\net6.0\fund1.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\bin\Debug\net6.0\fund1.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\refint\fund1.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\fund1.genruntimeconfig.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\fund1\obj\Debug\net6.0\ref\fund1.dll
