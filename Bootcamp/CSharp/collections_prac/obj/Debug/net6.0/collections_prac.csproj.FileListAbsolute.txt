@@ -1,0 +1,15 @@
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\bin\Debug\net6.0\collections_prac.exe
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\bin\Debug\net6.0\collections_prac.deps.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\bin\Debug\net6.0\collections_prac.runtimeconfig.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\bin\Debug\net6.0\collections_prac.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\bin\Debug\net6.0\collections_prac.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.csproj.AssemblyReference.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.AssemblyInfoInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.AssemblyInfo.cs
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.csproj.CoreCompileInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\refint\collections_prac.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\collections_prac.genruntimeconfig.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\collections_prac\obj\Debug\net6.0\ref\collections_prac.dll
