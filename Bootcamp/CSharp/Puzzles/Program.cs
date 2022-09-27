@@ -30,7 +30,7 @@ static int TossCoin()
 {
     Console.WriteLine("Tossing a Coin");
     Random random = new Random();
-
+    //creates random int between 0 and 1
     int results = random.Next(0, 2);
     if(results == 0)
     {
