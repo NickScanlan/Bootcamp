@@ -1,0 +1,15 @@
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\bin\Debug\net6.0\Human.exe
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\bin\Debug\net6.0\Human.deps.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\bin\Debug\net6.0\Human.runtimeconfig.json
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\bin\Debug\net6.0\Human.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\bin\Debug\net6.0\Human.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.csproj.AssemblyReference.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.AssemblyInfoInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.AssemblyInfo.cs
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.csproj.CoreCompileInputs.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\refint\Human.dll
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.pdb
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\Human.genruntimeconfig.cache
+C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\nin_wiz_sam\obj\Debug\net6.0\ref\Human.dll
