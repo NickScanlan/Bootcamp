@@ -21,7 +21,7 @@ public class HomeController : Controller
         ViewBag.SurveyInfo = surveyInfo;
         
         
-        Console.WriteLine(surveyInfo[2]); 
+        Console.WriteLine(surveyInfo[0],surveyInfo[1],surveyInfo[2],surveyInfo[3]); 
         return View("results");
     }
 
