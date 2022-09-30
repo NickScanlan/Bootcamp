@@ -8,17 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DojoSurvey
 build_property.RootNamespace = DojoSurvey
-build_property.ProjectDir = C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\DojoSurvey\
+build_property.ProjectDir = c:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\DojoSurvey\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\DojoSurvey
+build_property.MSBuildProjectDirectory = c:\Users\nicho\VSCode\Bootcamp\Bootcamp\CSharp\DojoSurvey
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/nicho/VSCode/Bootcamp/Bootcamp/CSharp/DojoSurvey/Views/Home/index.cshtml]
+[c:/Users/nicho/VSCode/Bootcamp/Bootcamp/CSharp/DojoSurvey/Views/Home/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nicho/VSCode/Bootcamp/Bootcamp/CSharp/DojoSurvey/Views/Home/results.cshtml]
+[c:/Users/nicho/VSCode/Bootcamp/Bootcamp/CSharp/DojoSurvey/Views/Home/results.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZXN1bHRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
