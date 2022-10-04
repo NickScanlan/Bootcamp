@@ -4,17 +4,17 @@
 @model User;
 
 <div>
-    <form asp-controller= "Home"  asp-action="results" method="POST">
+    <form asp-controller= "Home"  asp-action="Results" method="POST">
         <div>
             <label asp-for="Name"></label>
             <span asp-validation-for = "Name" class="text-danger"></span>
-            <input asp-for="Name" name="Name" type="text">
+            <input asp-for="Name" type="text">
         </div>
         
         <div>
             <label asp-for="Location"></label>
             <span asp-validation-for = "Location" class="text-danger"></span>
-            <select asp-for="Location" name="Location" id="location">
+            <select asp-for="Location" id="location">
                 <option value="California">CA</option>
                 <option value="Nevada">NV</option>
                 <option value="Colorado">CO</option>
@@ -25,7 +25,7 @@
         <div>
             <label asp-for="Language"></label>
             <span asp-validation-for = "Language" class="text-danger"></span>
-            <select asp-for="Language" name="Language" id="language">
+            <select asp-for="Language"  id="language">
                 <option value="C#">C#</option>
                 <option value="Python">Python</option>
                 <option value="JavaScript">JavaScript</option>
@@ -36,7 +36,7 @@
         <div>
             <label asp-for="Comment"></label>
             <span asp-validation-for = "Comment" class="text-danger"></span>
-            <textarea asp-for="Comment" asp-name="comment" name="Comment" id="comment" cols="30" rows="10"></textarea>
+            <textarea asp-for="Comment" asp-name="comment"  id="comment" cols="30" rows="10"></textarea>
         </div>
         <button>submit</button>
     </form>

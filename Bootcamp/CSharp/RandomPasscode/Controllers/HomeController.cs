@@ -14,7 +14,29 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-    {
+    {        
+        int? number = HttpContext.Session.GetInt32("number");
+        if(number == null)
+        {
+            number = 1;
+        }
+        else
+        {
+            number += 1;
+        }
+        HttpContext.Session.SetInt32("number", number.GetValueOrDefault());
+        
+        
+        HttpContext.Session.SetString("passcode", "");
+        string? passcode = HttpContext.Session.GetString("passcode");
+        if(passcode == "")
+        {
+            passcode = "press generate to generate passcode";
+        }
+        
+        
+
+
         return View();
     }
 
@@ -25,4 +47,7 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    
+
 }

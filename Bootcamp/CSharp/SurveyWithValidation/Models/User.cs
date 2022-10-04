@@ -20,7 +20,7 @@ public class User
 
     [MinLength(20, ErrorMessage = "Comment must be more than 20 Characters")]
     [Display(Name = "Comment:")]
-    public string Comment {get; set;}
+    public string? Comment {get; set;}
 }
 
 
