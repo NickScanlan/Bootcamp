@@ -13,44 +13,43 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {        
-        int? number = HttpContext.Session.GetInt32("number");
-        if(number == null)
-        {
-            number = 1;
-        }
-        else
-        {
-            number += 1;
-        }
-        HttpContext.Session.SetInt32("number", number.GetValueOrDefault());
-        
-        
-        HttpContext.Session.SetString("passcode", "");
-        string? passcode = HttpContext.Session.GetString("passcode");
-        if(passcode == "")
-        {
-            passcode = "press generate to generate passcode";
-        }
-
-
-        
-        
-        
-
-
-        return View();
-    }
-
-    
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+public class PasscodeController : Controller
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        [Route("")]
+        [HttpGet]
+        public IActionResult Index()
+        {
+            System.Console.WriteLine(TempData["passcode"]);
+            int? attempt = HttpContext.Session.GetInt32("attempt");
+            if(attempt == null)
+            {
+                HttpContext.Session.SetInt32("attempt", 1);
+            }
+            else
+            {
+                attempt += 1;
+                HttpContext.Session.SetInt32("attempt", (int)attempt);
+            }
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            string passcode = "";
+            Random rand = new Random();
+            for(int i = 1; i < 15; i++)
+            {
+                int x = rand.Next(0,36);
+                passcode += chars[x];
+            }
+            TempData["passcode"] = passcode;
+            TempData["attempt"] = HttpContext.Session.GetInt32("attempt");
+            
+            return View();
+        }
+        [HttpGet]
+        [Route("/clear")]
+        public IActionResult Clear()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
     }
-
-    
 
 }
