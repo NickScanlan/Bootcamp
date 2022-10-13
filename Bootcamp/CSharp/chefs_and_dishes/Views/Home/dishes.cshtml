@@ -1,0 +1,34 @@
+@Model dishes
+
+<div>
+    <h1><a href="/">Chefs</a> | Dishes</h1>
+
+    <a href="/AddDish">Add a Dish</a>
+</div>
+
+<h2>List of Dishes</h2>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <th>Name</th>
+        <th>Chefs</th>
+        <th>Tastiness</th>
+        <th>Calories</th>
+    </thead>
+    <tbody>
+        @* //lists all chefs individually *@
+        @if(ViewBag.AllDishes != null)
+        {
+            @foreach(var dishes in ViewBag.AllDishes)
+            {
+                <tr>
+                    <td>@dishes.dish_name</td>
+                    <td>@dishes.ChefName</td>
+                    <td>@dishes.tastiness</td>
+                    <td>@dishes.calories</td>
+                    
+                </tr>
+            }
+        }
+    </tbody>
+</table>
