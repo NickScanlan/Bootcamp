@@ -1,0 +1,46 @@
+@model Post
+
+<div class="container w-75 mx-auto">
+  <h2 class="text-center">Make a Post</h2>
+
+  <form
+    class="shadow p-3 rounded"
+    asp-controller="Posts"
+    asp-action="Create"
+    method="POST"
+  >
+    <div class="mb-3">
+      <label asp-for="img"></label>
+      <span asp-validation-for="img" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="img" />
+    </div>
+    
+    <div class="mb-3">
+      <label asp-for="title"></label>
+      <span asp-validation-for="title" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="title" />
+    </div>
+
+    <div class="mb-3">
+      <label asp-for="medium"></label>
+      <span asp-validation-for="medium" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="medium" />
+    </div>
+    
+    <div class="mb-3">
+      <input type="checkbox" asp-for="forsale">
+      <span asp-validation-for="forsale" class="text-danger font-weight-bold">
+      </span>
+      <label asp-for="forsale"></label> 
+    </div>
+
+    
+
+    
+
+    <button class="btn btn-success">Post</button>
+  </form>
+</div>

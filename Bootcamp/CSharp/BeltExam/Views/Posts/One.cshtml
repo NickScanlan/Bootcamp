@@ -1,0 +1,36 @@
+@model Post
+
+<a href="/posts">View All Posts</a>
+
+
+<div>
+    <div>
+    <h2>@Model.title</h2>
+    <img src="@Model.img" alt="">
+    </div>
+
+    <div>
+        <h2>By: @Model.UserId</h2>
+        <h2>Medium: @Model.medium</h2>
+        <h2>@if(@Model.forsale == false)
+            {
+               <h3>Not For Sale</h3> 
+            }
+            else
+            {
+                <h3>Not For Sale</h3>
+            }</h2>
+         
+    </div>
+    
+    <form
+        asp-asp-controller = "Posts"
+        asp-action="DeletePost"
+        asp-route-deletePostId= "@Model.PostId" 
+        method="POST"       
+    >
+        <button class= "btn-outline-danger">Delete</button>
+    </form>
+    <a href="/posts/@Model.PostId/edit">Edit</a>
+    
+</div>

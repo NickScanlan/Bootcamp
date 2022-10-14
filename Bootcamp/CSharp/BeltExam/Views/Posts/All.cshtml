@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+@model List<Post>
+
+<a href="/posts/new">Create a Post</a>
+
+
+@foreach (Post posts in Model)
+{
+     <div class="border border-dark">
+        <img src="@posts.img" alt="post image" class="card-img-top"/>
+
+        <h3>
+           <a
+            asp-controller="Posts"
+            asp-action="GetOnePost" 
+            asp-route-onePostId = "@posts.PostId"
+           >@posts.title</a> 
+        </h3>
+
+        <h3>
+            By: @posts.UserId
+        </h3>
+
+        <h3>
+            Medium: @posts.medium
+        </h3>
+
+        <h3>
+            @if(@posts.forsale == false)
+            {
+               <h3>Not For Sale</h3> 
+            }
+            else
+            {
+                <h3>Not For Sale</h3>
+            }
+        </h3> 
+
+        <a  asp-controller="Posts"
+            asp-action = "EditOnePost"
+            asp-route-onePostId = " @posts.PostId"
+            >Edit</a>
+        
+         <a asp-controller = "Posts"
+            asp-action="DeleteOnePost"
+            asp-route-onePostId = "@posts.PostId"
+            
+            >Delete</a>
+
+
+     </div>
+
+}
+
