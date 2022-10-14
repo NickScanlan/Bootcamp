@@ -1,0 +1,31 @@
+@model Wedding
+
+<a href="/weddings">Home</a>
+<h1>@Model.WedderOne and @Model.WedderTwo Wedding</h1>
+<h2>@Model.Address</h2>
+<div>@Model.WeddingDate</div>
+
+
+
+@* conditionally show edit/delete if wedding was created by logged in user *@
+@if (Model.UserId == Context.Session.GetInt32("UUID"))
+{
+    <a href="/weddings/@Model.WeddingId/edit">Edit</a>
+    <form
+        asp-controller="Weddings"
+        asp-action="DeleteWedding"
+        asp-route-deletedWeddingId="@Model.WeddingId"
+        method="POST"
+    >
+        <button class="btn-outline-danger">Delete</button>
+    </form>
+}
+
+<h3>Signed up Users</h3>
+@foreach (UserWeddingSignup uvs in Model.WeddingSignups)
+{
+    if(uvs.User != null)
+    {
+        <p>@uvs.User.FirstName @uvs.User.LastName</p>
+    }
+}

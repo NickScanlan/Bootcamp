@@ -1,0 +1,52 @@
+@model List<Wedding>
+
+@Context.Session.GetString("Email")
+
+<p>Welcome</p>
+<a href="/weddings/new">Create a Wedding</a>
+<p>Home</p>
+
+<h2 class="text-center">All Weddings</h2>
+<hr />
+
+
+
+
+@foreach (Wedding wedding in Model) {
+  <div class="card shadow rounded mx-auto w-75 mb-3">
+    <h4 class="card-title text-center bg-dark text-light py-2 rounded-top">
+      Wedding with @wedding.WedderOne and @wedding.WedderTwo
+    </h4>
+
+    <div class="card-body">
+      <p class="card-text">Located at @wedding.Address</p>
+      <small class="text-muted"> Submitted on: @wedding.CreatedAt </small>
+    </div>
+    <a 
+        asp-controller="Weddings"
+        asp-action="GetOneWedding"
+        asp-route-oneWeddingId="@wedding.WeddingId"
+        class="btn btn-outline-info"
+    >
+      View Details
+    </a>
+    @{
+      bool alreadySignedUp = wedding.WeddingSignups.Any(ws => ws.UserId == Context.Session.GetInt32("UUID"));
+    }
+
+    <form class = "text-center" asp-controller="Weddings" asp-action="Signup" asp-route-weddingId="@wedding.WeddingId">
+    <p>@wedding.WeddingSignups.Count reserved a seat for this wedding</p>
+    
+    <button>
+      @if(alreadySignedUp)
+      {
+        <span>Bail</span>
+      }
+      else
+      {
+        <span>RSVP</span>
+      }
+    </button>
+    </form>
+  </div>
+}
