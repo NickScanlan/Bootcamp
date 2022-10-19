@@ -1,0 +1,95 @@
+@model List<Meeting>
+
+@Context.Session.GetString("Email")
+<a href="/meetings/new">Create a Meeting</a>
+
+<div class="d-flex justify-content-between">
+<p>Home</p>
+<form asp-controller="Users" asp-action="Logout" method="POST">
+    <button class="btn btn-link">Logout</button>
+</form>
+</div>
+
+<h2 class="text-center">All Meetings</h2>
+<hr />
+
+
+
+<table class="table">
+ <tr>
+    <th>Meet Up</th>
+    <th>Date and Time</th>
+    <th>Duration</th>
+    <th>Coordinator</th>
+    <th>Participants #</th>
+    <th>Actions</th>
+  </tr>
+
+@foreach (Meeting meeting in Model)
+{
+     
+ 
+  <tr>
+    
+    <td>
+      <a  asp-controller="Meetings"
+          asp-action = "GetOneMeeting"
+          asp-route-oneMeetingId = "@meeting.MeetingId"
+          >@meeting.Title</a>
+    </td>  
+    <td>@meeting.MeetingDate</td>  
+    
+    <td>@meeting.Duration @meeting.DurationTime</td>  
+    
+    <td>@meeting.Coordinator.Name</td>  
+    @* <td>@meeting.Participants.Count</td>   *@
+    <td>
+        <p>@meeting.MeetingSignups.Count</p>
+    <td>
+    
+    
+    @{
+      
+      bool alreadySignedUp = meeting.MeetingSignups.Any(ms => ms.UserId == Context.Session.GetInt32("UUID"));
+      
+    }
+    @if (meeting.UserId != Context.Session.GetInt32("UUID"))
+    {
+    
+      @if(alreadySignedUp)
+      {
+        <a href="/meetings/@meeting.MeetingId/signup">Leave</a>
+      }
+      else
+      {
+        <a href="/meetings/@meeting.MeetingId/signup"> Join</a>
+      }
+
+    }
+    @if (meeting.UserId == Context.Session.GetInt32("UUID"))
+    {
+      <form
+          asp-controller="Meetings"
+          asp-action="DeleteOneMeeting"
+          asp-route-deleteMeetingId="@meeting.MeetingId"
+          method="POST"
+      >
+          <button class="btn btn-link">Delete</button>
+      </form>
+    }
+    
+   
+    </td>  
+  </tr>
+   }
+
+
+
+</table>
+
+
+
+
+
+ 
+

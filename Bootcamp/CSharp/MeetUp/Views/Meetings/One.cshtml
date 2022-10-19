@@ -1,0 +1,50 @@
+@model Meeting
+
+
+<div class="d-flex justify-content-between">
+<a href="/meetings">Home</a>
+<form asp-controller="Users" asp-action="Logout" method="POST">
+    <button class="btn btn-link">Logout</button>
+</form>
+</div>
+
+
+<div>
+    <div>
+    <h2 class="text-center">@Model.Title</h2>
+    </div>
+    
+    <div>
+        <h3>Event Coordinator: @Model.Coordinator.Name</h3>
+
+        <h3>Description:</h3>
+        <p>@Model.Description</p>
+
+        <h4> Participants:</h4>
+            @foreach (UserMeetingSignup ums in Model.MeetingSignups)
+            {
+            
+                    <p>@ums.User.UserId</p>
+                
+            }
+        
+    </div>
+    <form asp-controller="Meetings" asp-action="Signup" asp-route-meetingId="@Model.MeetingId" method="POST">
+    @{
+      
+      bool alreadySignedUp = Model.MeetingSignups.Any(ms => ms.UserId == Context.Session.GetInt32("UUID"));
+      
+    }
+    
+    <button>
+      @if(alreadySignedUp)
+      {
+        <span>Leave</span>
+      }
+      else
+      {
+        <span>Join</span>
+      }
+    </button>
+    </form>
+</div>

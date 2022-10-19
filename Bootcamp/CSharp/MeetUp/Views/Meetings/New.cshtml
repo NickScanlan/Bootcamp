@@ -1,0 +1,61 @@
+@model Meeting
+<p>Create a Meeting</p>
+<div class="d-flex justify-content-between">
+<a href="/Meetings">Home</a>
+<form asp-controller="Users" asp-action="Logout" method="POST">
+    <button class="btn btn-link">Logout</button>
+</form>
+</div>
+
+
+<div class="container w-75 mx-auto">
+  <h2 class="text-center">Create a Meeting</h2>
+
+  <form
+    class="shadow p-3 rounded"
+    asp-controller="Meetings"
+    asp-action="Create"
+    method="POST"
+  >
+    <div class="mb-3">
+      <label asp-for="Title"></label>
+      <span asp-validation-for="Title" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="Title" />
+    </div>
+    
+    <div class="mb-3">
+      <label asp-for="MeetingDate"></label>
+      <span asp-validation-for="MeetingDate" class="text-danger font-weight-bold">
+      </span>
+      <input type="datetime-local" class="form-control" asp-for="MeetingDate" />
+    </div>
+
+    <div class="mb-3 d-flex justify-content-around">
+      <label asp-for="Duration"></label>
+      <span asp-validation-for="Duration" class="text-danger font-weight-bold">
+      </span>
+      <input type="number" class="form-control" asp-for="Duration"/>
+      <select asp-for="DurationTime">
+        <option value="Minutes">Minutes</option>
+        <option value="Hours">Hours</option>
+        <option value="Days">Days</option>
+      </select>
+    </div>
+    
+    <div class="mb-3">
+      <label asp-for="Description"></label>
+      <span asp-validation-for="Description" class="text-danger font-weight-bold">
+      </span>
+      <textarea asp-for="Description" cols="30" rows="10"></textarea>
+    </div>
+    
+    
+
+    
+
+    
+
+    <button class="btn btn-success">Create Meeting</button>
+  </form>
+</div>
