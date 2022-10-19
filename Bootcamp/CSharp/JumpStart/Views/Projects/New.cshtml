@@ -1,0 +1,55 @@
+@model Project
+<div class="d-flex justify-content-between">
+<a href="/projects">View All Projects</a>
+<form asp-controller="Users" asp-action="Logout" method="POST">
+    <button class="btn btn-link">Logout</button>
+</form>
+</div>
+
+
+<div class="container w-75 mx-auto">
+  <h2 class="text-center">Start a Project</h2>
+
+  <form
+    class="shadow p-3 rounded"
+    asp-controller="Projects"
+    asp-action="Create"
+    method="POST"
+  >
+    <div class="mb-3">
+      <label asp-for="title"></label>
+      <span asp-validation-for="title" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="title" />
+    </div>
+    
+    <div class="mb-3">
+      <label asp-for="goal"></label>
+      <span asp-validation-for="goal" class="text-danger font-weight-bold">
+      </span>
+      <input type="number" class="form-control" asp-for="goal" />
+    </div>
+
+    <div class="mb-3">
+      <label asp-for="deadline"></label>
+      <span asp-validation-for="deadline" class="text-danger font-weight-bold">
+      </span>
+      <input type="date" class="form-control" asp-for="deadline" />
+    </div>
+    
+    <div class="mb-3">
+      <label asp-for="description"></label>
+      <span asp-validation-for="description" class="text-danger font-weight-bold">
+      </span>
+      <textarea asp-for="description" cols="30" rows="10"></textarea>
+    </div>
+    
+    
+
+    
+
+    
+
+    <button class="btn btn-success">Get Started</button>
+  </form>
+</div>

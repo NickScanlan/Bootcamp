@@ -1,0 +1,23 @@
+@model UserProjectSupport
+
+<div>
+        <h3>Support this Project</h3>
+        <form 
+        asp-controller="Projects"
+        asp-action="Support"
+        asp-route-projectId = "@Model.ProjectId"
+        asp-method="POST"
+        >
+    <div class="mb-3">
+        <label asp-for="UserProjectGoalSupport"></label>
+        <span
+        asp-validation-for="UserProjectGoalSupport"
+        class="text-danger font-weight-bold"
+        ></span>
+        <input asp-for="UserProjectGoalSupport" class="form-control" />
+    </div>
+        <button>Support</button>
+        </form>
+        
+
+</div>

@@ -1,0 +1,48 @@
+@model Project
+
+
+<div class="d-flex justify-content-between">
+<a href="/projects">View All Projects</a>
+<form asp-controller="Users" asp-action="Logout" method="POST">
+    <button class="btn btn-link">Logout</button>
+</form>
+</div>
+<div>
+        <h2 class="text-center">@Model.title</h2>
+        <p class="text-center">@Model.description</p>
+        </div>
+<div class="container d-flex justify-content-around">
+    <div>
+        
+
+        <div>
+            @* <h2> US $@</h2> *@
+            <p>pledged of US$ @Model.goal goal</p>
+        
+            
+        </div>
+        
+        <div>
+            @foreach (UserProjectSupport amount  in Model.ProjectSupports)
+            {
+              <h2>@Model.ProjectSupports.Count</h2>  
+            }
+            
+            <p>Supporters</p>
+        </div>
+
+        <div>
+            <h3>Ends: @Model.deadline</h3>
+        </div>
+    </div>
+    
+    @{
+        UserProjectSupport newSupport = new UserProjectSupport();
+        newSupport.ProjectId = Model.ProjectId;
+    }
+    <div class="col-md">
+            <partial name="_Support" model="@newSupport"></partial>
+    </div>
+</div>
+    
+    

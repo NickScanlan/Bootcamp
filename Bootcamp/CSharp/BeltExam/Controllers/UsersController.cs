@@ -22,8 +22,8 @@ public class UsersController : Controller
         }
     }
 
-    private BeltExamContext db;
-    public UsersController(BeltExamContext context)
+    private JumpStartContext db;
+    public UsersController(JumpStartContext context)
     {
         db = context;
     }

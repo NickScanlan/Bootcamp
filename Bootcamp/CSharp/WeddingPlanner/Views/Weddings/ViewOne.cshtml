@@ -22,10 +22,10 @@
 }
 
 <h3>Signed up Users</h3>
-@foreach (UserWeddingSignup uvs in Model.WeddingSignups)
+@foreach (UserWeddingSignup uws in Model.WeddingSignups)
 {
-    if(uvs.User != null)
+    if(uws.User != null)
     {
-        <p>@uvs.User.FirstName @uvs.User.LastName</p>
+        <p>@uws.User.FirstName @uws.User.LastName</p>
     }
 }
