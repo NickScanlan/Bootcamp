@@ -2,9 +2,9 @@
 Given by Riot games.
 */
 
-const str1 = "b70a164c32a20c10";
+const str1 = "b70a164c32a20c10c22a31b43";
 
-const expected1 = "a184b70c42";
+const expected1 = "a215b113c64";
 
 /**
  * Rehashes an incorrectly hashed string by combining letter count occurrences
