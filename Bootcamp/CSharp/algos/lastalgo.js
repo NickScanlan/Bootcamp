@@ -2,9 +2,9 @@
 Given by Riot games.
 */
 
-const str1 = "b70a164c32a20c10c22a31b43";
+const str1 = "a24 b32 c13 a32 b69 c420";
 
-const expected1 = "a215b113c64";
+const expected1 = "a56b101c433";
 
 /**
  * Rehashes an incorrectly hashed string by combining letter count occurrences
@@ -15,7 +15,7 @@ const expected1 = "a215b113c64";
  * @returns {string} The correctly rehashed string alphabetized.
  */
  function rehash(str) {
-    const letterHashCounts = {};
+  const letterHashCounts = {};
     let numStr = "";
     let letter = str[0];
   
@@ -58,5 +58,7 @@ const expected1 = "a215b113c64";
     return newHash;
   }
   console.log(rehash(str1));
+ 
 
 
+rehash(str1)
