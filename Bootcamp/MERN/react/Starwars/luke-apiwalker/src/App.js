@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom";
 import {People} from "./views/People"
 import {Planets} from "./views/Planets"
 import {Form} from './views/Form'
-import {notFound} from './views/NotFound'
+import {Error} from './views/NotFound'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
     <Route path="/people/:peopleId" element={<People/>}/>
     <Route path="/planets/:planetId" element={<Planets/>}/>
     <Route path="/" element={<Form/>}/>
-    <Route path="*" element={<notFound/>}/>
+    <Route path="*" element={<Error/>}/>
 
     
     
