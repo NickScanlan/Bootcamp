@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom"
 import axios from 'axios'
+import { Form } from "./Form";
 
 
 export const Planets = (props) => {
@@ -20,6 +21,7 @@ export const Planets = (props) => {
 
     return( 
     <>
+    <Form/>
     <h1>{planet.name}</h1>
     <div>
         <h5>Climate: {planet.climate}</h5>

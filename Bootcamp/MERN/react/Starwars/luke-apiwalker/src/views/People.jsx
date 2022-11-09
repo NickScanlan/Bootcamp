@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom"
 import axios from 'axios'
+import { Form } from "./Form";
 
 
 export const People = (props) => {
@@ -19,6 +20,7 @@ export const People = (props) => {
 
     return(    
     <>
+    <Form/>
     <h1>{people.name}</h1>
     <div>
         <h5>Height: {people.height}</h5>
