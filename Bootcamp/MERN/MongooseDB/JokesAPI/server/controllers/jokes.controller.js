@@ -18,7 +18,7 @@ module.exports.findOneJoke = (req, res) => {
 module.exports.createNewJoke = (req, res) => {
     Joke.create(req.body)
         .then(newlyCreatedJoke => res.json({joke: newlyCreatedJoke}))
-        .catch(err => res.json ({message: "something went wron", error:err}))
+        .catch(err => res.json ({message: "something went wrong", error:err}))
     }
 
 //UPDATE JOKE
